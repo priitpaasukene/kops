@@ -33,17 +33,17 @@ CACHE_DIR=/nvidia-device-plugin
 # http://www.nvidia.com/Download/index.aspx
 declare -A class_to_driver_file
 class_to_driver_file=( \
-    ["g2"]="http://us.download.nvidia.com/XFree86/Linux-x86_64/367.124/NVIDIA-Linux-x86_64-367.124.run" \
-    ["g3"]="http://us.download.nvidia.com/tesla/390.46/NVIDIA-Linux-x86_64-390.46.run" \
-    ["p2"]="http://us.download.nvidia.com/tesla/390.46/NVIDIA-Linux-x86_64-390.46.run" \
-    ["p3"]="http://us.download.nvidia.com/tesla/390.46/NVIDIA-Linux-x86_64-390.46.run" \
+    ["g2"]="https://download.nvidia.com/XFree86/Linux-x86_64/410.93/NVIDIA-Linux-x86_64-410.93.run" \
+    ["g3"]="http://us.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run" \
+    ["p2"]="http://us.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run" \
+    ["p3"]="http://us.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run" \
 )
 declare -A class_to_driver_checksum
 class_to_driver_checksum=( \
-    ["g2"]="77f37939efeea4b6505842bed50445971992e303" \
-    ["g3"]="57569ecb6f6d839ecc77fa10a2c573cc069990cc" \
-    ["p2"]="57569ecb6f6d839ecc77fa10a2c573cc069990cc" \
-    ["p3"]="57569ecb6f6d839ecc77fa10a2c573cc069990cc" \
+    ["g2"]="972ba71832799440614aa3e9f34be59245c2f1a2" \
+    ["g3"]="425e589df6be6a71316690d3f7094d2a5f69eda3" \
+    ["p2"]="425e589df6be6a71316690d3f7094d2a5f69eda3" \
+    ["p3"]="425e589df6be6a71316690d3f7094d2a5f69eda3" \
 )
 
 # CUDA Files that need to be installed ~1.4GB
@@ -52,16 +52,16 @@ class_to_driver_checksum=( \
 #   Order in the arrays below matters
 # https://developer.nvidia.com/cuda-downloads
 cuda_files=( \
-  "https://developer.nvidia.com/compute/cuda/9.1/Prod/local_installers/cuda_9.1.85_387.26_linux" \
-  "https://developer.nvidia.com/compute/cuda/9.1/Prod/patches/1/cuda_9.1.85.1_linux" \
-  "https://developer.nvidia.com/compute/cuda/9.1/Prod/patches/2/cuda_9.1.85.2_linux" \
-  "https://developer.nvidia.com/compute/cuda/9.1/Prod/patches/3/cuda_9.1.85.3_linux" \
+  "https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux" \
+  "https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux" \
+  "https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux" \
+  "https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_410.48_linux" \
 )
 cuda_files_checksums=( \
-  "1540658f4fe657dddd8b0899555b7468727d4aa8" \
-  "7ec6970ecd81163b0d02ef30d35599e7fd6e97d8" \
-  "cfa3b029b58fc117d8ce510a70efc848924dd565" \
-  "6269a2c5784b08997edb97ea0020fb4e6c8769ed" \
+  "009cb0b6d3a81a97eb529e2301ff613e23c6edd3" \
+  "009cb0b6d3a81a97eb529e2301ff613e23c6edd3" \
+  "009cb0b6d3a81a97eb529e2301ff613e23c6edd3" \
+  "009cb0b6d3a81a97eb529e2301ff613e23c6edd3" \
 )
 
 containsElement () { for e in "${@:2}"; do [[ "$e" = "$1" ]] && return 0; done; return 1; }
